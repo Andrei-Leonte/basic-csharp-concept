@@ -81,8 +81,8 @@ namespace ExpressionTrees
 
     public class AppDbContext : DbContext
     {
-        public DbSet<Person> People { get; set; }
-        public DbSet<Book> Books { get; set; }
+        public DbSet<Person> People => Set<Person>();
+        public DbSet<Book> Books => Set<Book>();
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
