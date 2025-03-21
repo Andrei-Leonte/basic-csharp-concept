@@ -1,4 +1,4 @@
-﻿namespace Indexers
+﻿namespace CustomIndexers
 {
     public class Book(string author, string title)
     {
@@ -9,7 +9,7 @@
     public class BookIndexer<T>
         where T : Book
     {
-        private T[] _books = new T[100];
+        private readonly T[] _books = new T[100];
 
         public T this[int i]
         {
