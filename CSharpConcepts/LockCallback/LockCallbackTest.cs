@@ -21,12 +21,10 @@ namespace LockCallback
         {
             //Arrange
             var expectedCounterValue = 10000;
-            static int runSafeAction() => LockCallback.RunUnsafe();
             List<int> results = [];
 
-
             //Act
-            
+            static int runSafeAction() => LockCallback.RunUnsafe();
             for (int i = 0; i < 1000; i++)
             {
                 results.Add(runSafeAction());

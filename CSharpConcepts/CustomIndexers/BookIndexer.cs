@@ -9,7 +9,7 @@
     public class BookIndexer<T>
         where T : Book
     {
-        private readonly T[] _books = new T[100];
+        private readonly T[] _books = new T[1000];
 
         public T this[int i]
         {
