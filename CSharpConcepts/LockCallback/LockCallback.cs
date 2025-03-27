@@ -26,13 +26,13 @@
         {
             int counter = 0;
 
-            var incrementClass1 = new IncrementClass();
+            var incrementClass = new IncrementClass();
 
             List<IncrementCallback> callbacks = [];
 
             for (int i = 0; i < 10000; i++)
             {
-                callbacks.Add(incrementClass1.IncrementUnsafe);
+                callbacks.Add(IncrementClass.IncrementUnsafe);
             }
 
             Parallel.ForEach(callbacks, callback => callback(ref counter));
@@ -45,7 +45,7 @@
 
         public delegate void IncrementCallback(ref int value);
 
-        public void increas(ref int value)
+        public static void Increas(ref int value)
         {
             value++;
         }
@@ -62,7 +62,7 @@
                 }
             }
 
-            public void IncrementUnsafe(ref int value)
+            public static void IncrementUnsafe(ref int value)
             {
                 value++;
             }

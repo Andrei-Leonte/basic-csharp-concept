@@ -11,7 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomIndexers", "CustomInd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constructors", "Constructors\Constructors.csproj", "{EFA31EF5-0BCD-4D8A-9C83-885175F7EF17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqQueries", "LinqQueries\LinqQueries.csproj", "{32D17CF3-BB35-4D20-A1ED-FA26FFF47CD7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LinqQuery", "LinqQuery", "{65C2C306-C540-4F6D-B1A8-050FF831A666}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqQueriesConsole", "LinqQueryMigration\LinqQueriesConsole.csproj", "{FCAF08F7-1ADB-4311-A89A-FBAC246C48D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqQueriesTest", "LinqQueriesTest\LinqQueriesTest.csproj", "{735C9AFB-4336-4EB3-82B2-A67CFC805754}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,12 +39,20 @@ Global
 		{EFA31EF5-0BCD-4D8A-9C83-885175F7EF17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFA31EF5-0BCD-4D8A-9C83-885175F7EF17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFA31EF5-0BCD-4D8A-9C83-885175F7EF17}.Release|Any CPU.Build.0 = Release|Any CPU
-		{32D17CF3-BB35-4D20-A1ED-FA26FFF47CD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{32D17CF3-BB35-4D20-A1ED-FA26FFF47CD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{32D17CF3-BB35-4D20-A1ED-FA26FFF47CD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{32D17CF3-BB35-4D20-A1ED-FA26FFF47CD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCAF08F7-1ADB-4311-A89A-FBAC246C48D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCAF08F7-1ADB-4311-A89A-FBAC246C48D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCAF08F7-1ADB-4311-A89A-FBAC246C48D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCAF08F7-1ADB-4311-A89A-FBAC246C48D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{735C9AFB-4336-4EB3-82B2-A67CFC805754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{735C9AFB-4336-4EB3-82B2-A67CFC805754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{735C9AFB-4336-4EB3-82B2-A67CFC805754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{735C9AFB-4336-4EB3-82B2-A67CFC805754}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FCAF08F7-1ADB-4311-A89A-FBAC246C48D8} = {65C2C306-C540-4F6D-B1A8-050FF831A666}
+		{735C9AFB-4336-4EB3-82B2-A67CFC805754} = {65C2C306-C540-4F6D-B1A8-050FF831A666}
 	EndGlobalSection
 EndGlobal
