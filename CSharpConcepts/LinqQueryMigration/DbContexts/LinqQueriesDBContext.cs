@@ -48,7 +48,6 @@ namespace LinqQueries.DbContexts
                     .WithMany(a => a.Books)
                     .HasForeignKey(a => a.PublishingHouseId);
             });
-
         }
     }
 
