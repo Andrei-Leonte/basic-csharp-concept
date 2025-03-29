@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LinqQueriesConsole.Repositories
 {
-    public class ClassicBookRepository() : BaseRepository<Book>()
+    public class CartesianExplosionBookRepository() : BaseRepository<Book>()
     {
-        public async Task<List<Book>> GetEagerAllAdultBookWithCartesianExplosionAsync()
+        public static async Task<List<Book>> GetEagerAllAdultBookWithCartesianExplosionAsync()
         {
             using var context = new LinqQueriesDBContext();
 
@@ -17,7 +17,7 @@ namespace LinqQueriesConsole.Repositories
                 .ToListAsync();
         }
 
-        public async Task<List<EagerBook>> GetEagerAllAdultBookUsingSelectAsync()
+        public static async Task<List<EagerBook>> GetEagerAllAdultBookUsingSelectAsync()
         {
             using var context = new LinqQueriesDBContext();
 
