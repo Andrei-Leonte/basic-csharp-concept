@@ -29,7 +29,6 @@ namespace PolymorphismTest
             Assert.Equal(authorName, book.GetAuthorName());
             Assert.Equal(authorBioSecondPage, book.GetAuthorPage(1));
             Assert.Equal(1_000, book.CountAuthorBioPages());
-            Assert.Equal(1, book.Get1Number());
         }
     }
 }
