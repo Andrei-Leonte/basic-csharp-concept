@@ -1,8 +1,8 @@
-﻿namespace Lock
+﻿namespace LockCallback
 {
-    internal class LockAndCallback
+    internal class LockCallback
     {
-        public static void RunSafe()
+        public static int RunSafe()
         {
             int counter = 0;
 
@@ -14,34 +14,38 @@
             {
                 callbacks.Add(incrementClass1.IncrementSafe);
             }
-    
+
             Parallel.ForEach(callbacks, callback => callback(ref counter));
 
             Console.WriteLine($"Safe run with lock counter -- {counter}");
+
+            return counter;
         }
 
-        public static void RunUnsafe()
+        public static int RunUnsafe()
         {
             int counter = 0;
 
-            var incrementClass1 = new IncrementClass();
+            var incrementClass = new IncrementClass();
 
             List<IncrementCallback> callbacks = [];
 
             for (int i = 0; i < 10000; i++)
             {
-                callbacks.Add(incrementClass1.IncrementUnsafe);
+                callbacks.Add(IncrementClass.IncrementUnsafe);
             }
 
             Parallel.ForEach(callbacks, callback => callback(ref counter));
 
             Console.WriteLine($"Unsafe run without lock counter -- {counter}");
+
+            return counter;
         }
 
 
         public delegate void IncrementCallback(ref int value);
 
-        public void increas(ref int value)
+        public static void Increas(ref int value)
         {
             value++;
         }
@@ -58,7 +62,7 @@
                 }
             }
 
-            public void IncrementUnsafe(ref int value)
+            public static void IncrementUnsafe(ref int value)
             {
                 value++;
             }
